@@ -1,0 +1,25 @@
+
+.card{
+  width: 350px;
+  min-width: 350px;
+  height: 200px;
+
+  background-color: #fafafa;
+  border-radius: 4px;
+
+  transition: transform .4s;
+
+  h4 {
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  p {
+    padding: 1rem 2rem;
+    text-align: justify;
+  }
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+}

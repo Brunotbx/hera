@@ -1,0 +1,48 @@
+.header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.hamburger {
+  cursor: pointer;
+}
+
+.nav {
+  ul {
+    display: flex;
+    list-style: none;
+  }
+
+  ul>li>a {
+    text-decoration: none;
+    padding: 0 1rem;
+    font-weight: 600;
+  }
+
+  @media (max-width: 600px) {
+    ul {
+      display: none;
+    }
+
+    &.open {
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f9f9f9;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        right: 0;
+        padding: 1rem 0;
+      }
+
+      ul>li>a {
+        padding: 0.5rem;
+      }
+    }
+  }
+}
