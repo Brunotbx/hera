@@ -4,7 +4,6 @@ import logo from "@/assets/logo.png";
 import Link from "next/link";
 import { useState } from "react";
 import { List } from "@phosphor-icons/react";
-import { WhatsappLogo } from "@phosphor-icons/react";
 
 export function Header({
   isVisible,
@@ -19,10 +18,6 @@ export function Header({
     setIsOpen(!isOpen);
   };
 
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
-
   return (
     <header className={styles.header}>
       {isMobile ? (
@@ -30,9 +25,15 @@ export function Header({
           <List size={32} weight="regular" />
           <div className={`${isOpen ? styles.isOpen : styles.isClose}`}>
             <ul>
-              <li>Sobre nós</li>
-              <li>Como trabalhamos</li>
-              <li>Depoimentos</li>
+              <Link href="#about">
+                <li>Sobre nós</li>
+              </Link>
+              <Link href="#work">
+                <li>Como trabalhamos</li>
+              </Link>
+              <Link href="#testimonials">
+                <li>Depoimentos</li>
+              </Link>
             </ul>
           </div>
         </div>
@@ -40,9 +41,15 @@ export function Header({
         <nav className={`${isVisible ? styles.navIcon : styles.nav}`}>
           {isVisible && <Image src={logo} alt={"Hera eventos"} width={200} />}
           <ul>
-            <li>Sobre nós</li>
-            <li>Como trabalhamos</li>
-            <li>Depoimentos</li>
+            <Link href="#about">
+              <li>Sobre nós</li>
+            </Link>
+            <Link href="#work">
+              <li>Como trabalhamos</li>
+            </Link>
+            <Link href="#testimonials">
+              <li>Depoimentos</li>
+            </Link>
           </ul>
         </nav>
       )}

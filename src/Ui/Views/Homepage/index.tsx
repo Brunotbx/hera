@@ -78,7 +78,7 @@ export default function HomePage({ size }: { size: boolean }) {
         </div>
       </section>
       <footer className={styles.footer}>
-        <p>Hera eventos - 2023</p>
+        <p>Hera eventos - 2023 ®</p>
       </footer>
     </main>
   );

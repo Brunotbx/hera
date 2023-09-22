@@ -58,7 +58,7 @@ export default function Home() {
           <Link href={"https://wa.me/5511981748251"} target="_blank">
             <WhatsappLogo
               className={`${!size ? "actionCall" : "actionCallMobile"}`}
-              size={52}
+              size={62}
               weight="light"
             />
           </Link>

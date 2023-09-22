@@ -53,11 +53,14 @@
     padding: 1rem;
     width: 90vw;
     text-align: center;
+    z-index: 999;
     opacity: 1;
     transition: transform 0.4s;
-    ul > li:hover {
-      border-bottom: 2px solid #9f8a59;
-      margin-bottom: -2px;
+    li {
+      padding: 0.75rem 0;
+    }
+    li:hover {
+      font-weight: 600;
       cursor: pointer;
     }
   }
