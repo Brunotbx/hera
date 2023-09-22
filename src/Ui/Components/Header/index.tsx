@@ -4,6 +4,7 @@ import logo from "@/assets/logo.png";
 import Link from "next/link";
 import { useState } from "react";
 import { List } from "@phosphor-icons/react";
+import { WhatsappLogo } from "@phosphor-icons/react";
 
 export function Header({
   isVisible,
@@ -24,50 +25,24 @@ export function Header({
 
   return (
     <header className={styles.header}>
-      {isVisible && <Image src={logo} alt={"Hera eventos"} width={250} />}
       {isMobile ? (
         <div className={styles.hamburger} onClick={toggleMenu}>
-          <List size={32} weight="light" />
+          <List size={32} weight="regular" />
+          <div className={`${isOpen ? styles.isOpen : styles.isClose}`}>
+            <ul>
+              <li>Sobre nós</li>
+              <li>Como trabalhamos</li>
+              <li>Depoimentos</li>
+            </ul>
+          </div>
         </div>
       ) : (
-        <nav className={styles.nav}>
+        <nav className={`${isVisible ? styles.navIcon : styles.nav}`}>
+          {isVisible && <Image src={logo} alt={"Hera eventos"} width={200} />}
           <ul>
-            <li>
-              <Link href="#about" onClick={closeMenu}>
-                Sobre nós
-              </Link>
-            </li>
-            <li>
-              <Link href="#work" onClick={closeMenu}>
-                Como trabalhamos
-              </Link>
-            </li>
-            <li>
-              <Link href="#testimonials" onClick={closeMenu}>
-                Depoimentos
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      )}
-      {isMobile && isOpen && (
-        <nav className={`${styles.nav} ${styles.open}`}>
-          <ul>
-            <li>
-              <Link href="#about" onClick={closeMenu}>
-                Sobre nós
-              </Link>
-            </li>
-            <li>
-              <Link href="#work" onClick={closeMenu}>
-                Como trabalhamos
-              </Link>
-            </li>
-            <li>
-              <Link href="#testimonials" onClick={closeMenu}>
-                Depoimentos
-              </Link>
-            </li>
+            <li>Sobre nós</li>
+            <li>Como trabalhamos</li>
+            <li>Depoimentos</li>
           </ul>
         </nav>
       )}

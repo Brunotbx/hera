@@ -18,11 +18,11 @@
 }
 
 .about {
-  background: #9F8A59;
+  background: #9f8a59;
   padding: 0 11rem;
-  @media(max-width: 999px) {
-      padding: 0 2rem;
-    }
+  @media (max-width: 999px) {
+    padding: 0 2rem;
+  }
 }
 
 .banner {
@@ -38,31 +38,30 @@
 }
 
 .four {
-  background: #DCD4C0;
+  background: #dcd4c0;
   padding: 8rem 11rem;
 }
 
 .footer {
-  background: #9F8A59;
+  background: #9f8a59;
   padding: 4rem 0;
   text-align: center;
   color: #fff;
 }
 
 .bg {
-
   display: flex;
   align-items: center;
   gap: 3rem;
   width: 100%;
-  @media(max-width: 999px) {
+  @media (max-width: 999px) {
     flex-direction: column;
   }
 }
 
 .image {
-  @media(max-width: 999px) {
-  display: none;
+  @media (max-width: 999px) {
+    display: none;
   }
 }
 
@@ -71,10 +70,10 @@
   line-height: 1.5;
   height: 450px;
   overflow: auto;
-  @media(max-width: 999px) {
-      height: 100%;
-      padding: 2rem 0;
-    }
+  @media (max-width: 999px) {
+    height: 100%;
+    padding: 2rem 0;
+  }
 }
 
 .cards {
@@ -84,9 +83,8 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  
-  gap: 2rem;
 
+  gap: 2rem;
 }
 
 @media (max-width: 700px) {

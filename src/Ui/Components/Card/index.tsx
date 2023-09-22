@@ -5,6 +5,19 @@ import IconBottom from "./iconBotton.svg";
 import Image from "next/image";
 
 export function Card({ title, mobile }: { title: string; mobile: boolean }) {
+  function controlRenderText(title: string): string {
+    switch (title) {
+      case "Ouro":
+        return "Acompanhamento da contratação dos fornecedores do início ao fim";
+      case "Prata":
+        return "Acompanhamento em 5 fornecedores durante o processo de contratação";
+      case "Bronze":
+        return "Revisão dos contratos já fechados e possíveis contratos";
+      default:
+        return "";
+    }
+  }
+
   return (
     <div className={`${styles.card} ${styles[title]}`}>
       <Image src={IconTop} alt="" className={styles.iconTop} />
@@ -32,13 +45,13 @@ export function Card({ title, mobile }: { title: string; mobile: boolean }) {
           <span>
             <Circle size={9} weight="fill" />
           </span>
-          <p>Revisão dos contratos já fechados e possíveis contratos</p>
+          <p>Execução no dia do casamento</p>
         </li>
         <li>
           <span>
             <Circle size={9} weight="fill" />
           </span>
-          <p>Execução no dia do casamento</p>
+          <p>{controlRenderText(title)}</p>
         </li>
       </ul>
       {!mobile && (
